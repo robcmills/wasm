@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Fetch wasm</title>
+  </head>
+  <body>
+    <button class="mybutton">Run myFunction</button>
+    <script async type="text/javascript" src="load-wasm.js"></script>
+    <script type='text/javascript'>
+      document.querySelector('.mybutton').addEventListener('click', function(){
+        console.log('myFunction', Module._myFunction(2, 4))
+      });
+    </script>
+  </body>
+</html>

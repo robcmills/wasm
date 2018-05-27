@@ -2,3 +2,5 @@
 node_modules
 hello5/hello5.js
 hello5/hello5.wasm
+*.em.js
+*.wasm
