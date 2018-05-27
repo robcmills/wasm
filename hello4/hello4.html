@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>hello4</title>
+	</head>
+	<body>
+		<button class="mybutton">Run myFunction</button>
+		<script type='text/javascript'>
+			var importObject = {
+				imports: {
+					myFunction: function() { console.log('myFunction') },
+				},
+			}
+
+			WebAssembly.instantiateStreaming(fetch('hello4.wasm'))
+				.then(function(obj) {
+					console.log('obj', obj)
+				  // obj.instance.exports.myFunction();
+
+				  // or access the buffer contents of an exported memory:
+				  // var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
+
+				  // or access the elements of an exported table:
+				  // var table = obj.instance.exports.table;
+				  // console.log(table.get(0)());
+				})
+
+			// myFunction
+			// document.querySelector('.mybutton').addEventListener('click', function(){
+			//   var result = Module.ccall('myFunction', // name of C function
+			//     null, // return type
+			//     null, // argument types
+			//     null); // arguments
+			// });
+		</script>
+		<!-- <script async type="text/javascript" src="hello4.js"></script> -->
+	</body>
+</html>
