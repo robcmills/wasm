@@ -10,9 +10,6 @@ var staticOptions = {
 	},
 }
 
-app.use(express.static('hello3', staticOptions))
-app.use(express.static('hello4', staticOptions))
-app.use(express.static('hello5', staticOptions))
-app.use(express.static('hello6', staticOptions))
+app.use(express.static('hello7', staticOptions))
 
 app.listen(3000, function() { console.log('App listening on port 3000') })
