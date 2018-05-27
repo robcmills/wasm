@@ -3,11 +3,8 @@
 
 extern "C" {
 	EMSCRIPTEN_KEEPALIVE
-	void myFunction(int argc, char ** argv) {
-		std::cout << "MyFunction Called" << std::endl;
-	}
-
-	int main(int argc, char ** argv) {
-		std::cout << "Hello World 5!" << std::endl;
+	int myFunction(int a, int b) {
+		std::cout << "MyFunction" << " a:" << a << " b:" << b << std::endl;
+		return a + b;
 	}
 }

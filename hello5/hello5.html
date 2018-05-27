@@ -10,12 +10,12 @@
     <script type='text/javascript'>
       // myFunction
       document.querySelector('.mybutton').addEventListener('click', function(){
-        console.log('Module', Module)
+        // console.log('Module', Module)
         var result = Module.ccall(
           'myFunction', // name of C function
-          null, // return type
-          null, // argument types
-          null // arguments
+          'number', // return type
+          ['number', 'number'], // argument types
+          [2, 4] // arguments
         );
         console.log('result:', result)
       });
